@@ -4,7 +4,7 @@ import './Contact.css'
 const socials = [
   {
     name: 'GitHub',
-    href: 'https://github.com/gavintaraka',
+    href: 'https://github.com/ipin131',
     desc: 'See my code & projects',
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
