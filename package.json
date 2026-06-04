@@ -1,0 +1,27 @@
+{
+  "name": "porto",
+  "version": "1.0.0",
+  "description": "Modern React portfolio with 3D interactive elements, serverless architecture for Netlify",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
+    "framer-motion": "^12.40.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.16.0",
+    "three": "^0.184.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "vite": "^6.4.3"
+  }
+}

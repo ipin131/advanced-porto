@@ -1,0 +1,119 @@
+.cv {
+  background: var(--light-bg);
+}
+
+.cv-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cv-upload-area {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem;
+  border: 3px dashed var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+}
+
+.upload-label:hover {
+  border-color: var(--primary-color);
+  background: var(--light-bg);
+}
+
+.upload-label svg {
+  color: var(--primary-color);
+}
+
+.upload-label span {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.upload-label small {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.cv-display {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.cv-icon {
+  color: var(--primary-color);
+}
+
+.cv-info h3 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.cv-info p {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.cv-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.download-btn {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.download-btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .cv-upload-area {
+    padding: 2rem 1rem;
+  }
+
+  .upload-label {
+    padding: 2rem 1rem;
+  }
+
+  .cv-display {
+    padding: 2rem 1rem;
+  }
+
+  .cv-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .download-btn,
+  .delete-btn {
+    width: 100%;
+  }
+}
