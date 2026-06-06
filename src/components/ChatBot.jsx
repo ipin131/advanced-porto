@@ -44,6 +44,7 @@ const ChatBot = () => {
   const sendMessage = async (text) => {
     const trimmed = text.trim()
     if (!trimmed || loading) return
+    if (trimmed.length > 600) return
 
     setShowSuggestions(false)
     const userMsg = { role: 'user', content: trimmed }
@@ -53,24 +54,29 @@ const ChatBot = () => {
     setLoading(true)
 
     try {
+      const controller = new AbortController()
+      const timeout = setTimeout(() => controller.abort(), 28000)
+
       const res = await fetch('/.netlify/functions/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           messages: newMessages.map(m => ({ role: m.role, content: m.content })),
         }),
+        signal: controller.signal,
       })
 
+      clearTimeout(timeout)
       const data = await res.json()
       setMessages(prev => [
         ...prev,
         { role: 'assistant', content: data.content || data.error || 'Something went wrong.' },
       ])
-    } catch {
-      setMessages(prev => [
-        ...prev,
-        { role: 'assistant', content: 'Connection error. Please try again.' },
-      ])
+    } catch (err) {
+      const msg = err.name === 'AbortError'
+        ? 'Response took too long. Please try again.'
+        : 'Connection error. Please try again.'
+      setMessages(prev => [...prev, { role: 'assistant', content: msg }])
     } finally {
       setLoading(false)
     }
@@ -181,9 +187,10 @@ const ChatBot = () => {
                 className="chat-input"
                 placeholder="Ask me anything..."
                 value={input}
-                onChange={e => setInput(e.target.value)}
+                onChange={e => setInput(e.target.value.slice(0, 600))}
                 onKeyDown={handleKeyDown}
                 disabled={loading}
+                maxLength={600}
               />
               <button
                 className="chat-send"
