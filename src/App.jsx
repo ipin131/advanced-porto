@@ -4,6 +4,7 @@ import About from './components/About'
 import Work from './components/Work'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ChatBot from './components/ChatBot'
 import './App.css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Work />
       <Contact />
       <Footer />
+      <ChatBot />
     </div>
   )
 }
