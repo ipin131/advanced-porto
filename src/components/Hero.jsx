@@ -29,8 +29,10 @@ const Hero = () => {
           <p className="role">Full Stack & Automation Developer</p>
           <p className="bio">
             Software engineer with enterprise experience at AirNav Indonesia.
-            I build full-stack web apps, automate workflows, and dabble in
-            security testing — from HRMS systems to 52-tool OSINT toolkits.
+            I build full-stack web apps, automate workflows, and develop
+            geospatial-enabled platforms — from HRMS systems with LLM integration
+            to e-commerce platforms with Leaflet-based store finders and
+            52-tool OSINT toolkits.
           </p>
 
           <div className="hero-actions">

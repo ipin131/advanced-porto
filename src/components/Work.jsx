@@ -6,8 +6,8 @@ const projects = [
     id: 1,
     title: 'HRMS Web Application',
     description:
-      'Freelance full-stack HRMS for AirNav Indonesia — employee management, attendance tracking, leave administration, and reporting modules.',
-    tags: ['Angular', 'Laravel', 'REST APIs', 'MySQL'],
+      'Full-stack HRMS for AirNav Indonesia built with Laravel 12, React, ViteJS, and Docker — featuring n8n workflow automation for HR pipelines, LLM-powered natural language reporting, and Cloudflare-secured production deployment. Developed in a 3-person agile team over 6+ months.',
+    tags: ['Laravel', 'React', 'Docker', 'n8n', 'MySQL'],
     link: '#',
     color: '#6366f1',
   },
@@ -33,8 +33,8 @@ const projects = [
     id: 4,
     title: 'Algorithmic Trading Bot',
     description:
-      'Live Python trading bot integrated with MetaTrader 5 API — handles automated trade execution, market data processing, and real-time risk management.',
-    tags: ['Python', 'MetaTrader 5', 'Automation'],
+      'Live Python trading bot integrated with MetaTrader 5 API — implements supply-demand zone detection with concavity-based confirmation for XAUUSD and EURUSD pairs. Running in production with live capital.',
+    tags: ['Python', 'MetaTrader 5', 'XAUUSD/EURUSD'],
     link: '#',
     color: '#06b6d4',
   },
@@ -55,6 +55,15 @@ const projects = [
     tags: ['Python', 'Linux', 'Security', 'OSINT'],
     link: '#',
     color: '#ef4444',
+  },
+  {
+    id: 7,
+    title: 'Melvis — E-Commerce Platform with Geospatial Store Finder',
+    description:
+      'Full-featured Indonesian e-commerce platform with product catalogue (46+ products, 6 categories), cart system, discount/badge logic, and a Leaflet-powered Store Finder consuming a GeoJSON FeatureCollection API (RFC 7946) — mapping 27 store locations across Indonesia with type filtering (Mall, Standalone, Warehouse) and real-time store search.',
+    tags: ['React', 'Leaflet', 'GeoJSON', 'REST API', 'Netlify'],
+    link: 'https://melvisstore.netlify.app/',
+    color: '#10b981',
   },
 ]
 
