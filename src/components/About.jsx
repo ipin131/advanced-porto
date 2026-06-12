@@ -1,27 +1,75 @@
 import { motion } from 'framer-motion'
 import './About.css'
 
-const skills = [
-  { name: 'Angular', icon: '🅰️' },
-  { name: 'React', icon: '⚛️' },
-  { name: 'Laravel', icon: '🔴' },
-  { name: 'Python', icon: '🐍' },
-  { name: 'TypeScript', icon: '🔷' },
-  { name: 'Node.js', icon: '🟩' },
-  { name: 'Ionic', icon: '⚡' },
-  { name: 'PostgreSQL', icon: '🐘' },
-  { name: 'Docker', icon: '🐳' },
-  { name: 'n8n', icon: '🔄' },
-  { name: 'Leaflet / GeoJSON', icon: '🗺️' },
-  { name: 'Linux / CI/CD', icon: '🐧' },
-  { name: 'Security / OSINT', icon: '🛡️' },
-  { name: 'Unity / AR', icon: '🎮' },
+const SKILLS = [
+  {
+    category: 'Languages',
+    color: '#58a6ff',
+    items: ['Python', 'JavaScript', 'TypeScript', 'PHP', 'Java', 'C#'],
+  },
+  {
+    category: 'Frontend',
+    color: '#3fb950',
+    items: ['React', 'Next.js', 'Angular', 'Vue.js', 'Ionic', 'Tailwind CSS', 'HTML', 'CSS'],
+  },
+  {
+    category: 'Backend',
+    color: '#f0883e',
+    items: ['Laravel', 'Node.js', 'Express.js', 'FastAPI', 'Flask', 'REST API', 'Microservices'],
+  },
+  {
+    category: 'Database',
+    color: '#bc8cff',
+    items: ['MySQL', 'PostgreSQL', 'Redis', 'SQLite'],
+  },
+  {
+    category: 'DevOps & Infrastructure',
+    color: '#d29922',
+    items: ['Docker', 'CI/CD', 'Ubuntu Linux', 'SSH', 'Git', 'GitHub Actions', 'Cloudflare', 'Netlify', 'Hostinger'],
+  },
+  {
+    category: 'Automation & Integration',
+    color: '#39d353',
+    items: ['n8n', 'Webhook', 'LLM Integration', 'Process Orchestration', 'WhatsApp Bot', 'Telegram Bot', 'Fonnte'],
+  },
+  {
+    category: 'AI & Machine Learning',
+    color: '#79c0ff',
+    items: ['Face Recognition', 'Computer Vision', 'Machine Learning', 'Algorithmic Trading (MT5)', 'Prompt Engineering', 'Multi-LLM Agentic Automation'],
+  },
+  {
+    category: 'Data Analysis',
+    color: '#56d364',
+    items: ['Data Analysis', 'Data Visualization', 'Dashboard Reporting', 'Aviation Data ML', 'Stakeholder Presentations'],
+  },
+  {
+    category: 'Security & OSINT',
+    color: '#f85149',
+    items: ['OSINT (52-tool framework)', 'Burp Suite', 'OWASP', 'Nmap', 'Wireshark', 'Metasploit', 'Penetration Testing', 'Malware Analysis'],
+  },
+  {
+    category: 'Geospatial & Game/AR',
+    color: '#e3b341',
+    items: ['Leaflet', 'GeoJSON', 'Unity', 'C# (Game)', '3D Modeling', 'Augmented Reality'],
+  },
 ]
 
 const About = () => {
   return (
     <section id="about" className="about">
       <div className="container">
+
+        <motion.div
+          className="about-header"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <span className="section-label">About Me</span>
+          <h2>Building systems that<br />actually work in prod</h2>
+        </motion.div>
+
         <div className="about-grid">
           <motion.div
             className="about-text"
@@ -30,21 +78,20 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="section-label">About Me</span>
-            <h2>Building systems that<br />actually work in prod</h2>
             <p>
-              I'm a full-stack developer and security practitioner with freelance
-              and enterprise experience — including an HRMS for AirNav Indonesia
-              (Laravel 12, React, Docker, n8n, LLM integration), an AI-powered
-              face recognition attendance system, and CI/CD infrastructure on
-              Ubuntu Linux.
+              Full-stack developer and security practitioner with enterprise-level
+              delivery experience at AirNav Indonesia — spanning software development,
+              data analytics, QA, penetration testing, and infrastructure operations.
             </p>
             <p>
-              Outside of work I build algorithmic trading bots (XAUUSD/EURUSD on
-              MetaTrader 5), geospatial e-commerce platforms using Leaflet and
-              GeoJSON APIs, multi-platform chatbot automation, and a custom
-              52-tool OSINT framework. Studying Computer Science at Bina
-              Nusantara University (2022–present).
+              Built and deployed an HRMS (Laravel 12, React, Docker, n8n, LLM integration),
+              an AI face recognition attendance system, and CI/CD pipelines on Ubuntu Linux.
+              Also building algorithmic trading bots (XAUUSD/EURUSD on MetaTrader 5),
+              a multi-platform chatbot suite, and a 52-tool personal OSINT framework.
+            </p>
+            <p>
+              Currently studying Computer Science at Bina Nusantara University (2022–present).
+              Open to freelance, contract, and full-time remote opportunities.
             </p>
           </motion.div>
 
@@ -55,25 +102,37 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <span className="section-label">Tech Stack</span>
-            <div className="skills-grid">
-              {skills.map((s, i) => (
-                <motion.div
-                  key={s.name}
-                  className="skill-item"
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1 + i * 0.04 }}
-                  whileHover={{ y: -3 }}
+            {SKILLS.map((group, gi) => (
+              <motion.div
+                key={group.category}
+                className="skill-group"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.05 * gi }}
+              >
+                <div
+                  className="skill-group-label"
+                  style={{ color: group.color }}
                 >
-                  <span className="skill-icon">{s.icon}</span>
-                  <span className="skill-name">{s.name}</span>
-                </motion.div>
-              ))}
-            </div>
+                  {group.category}
+                </div>
+                <div className="skill-chips">
+                  {group.items.map(item => (
+                    <span
+                      key={item}
+                      className="skill-chip"
+                      style={{ '--chip-color': group.color }}
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
+
       </div>
     </section>
   )
