@@ -1,0 +1,117 @@
+.cv-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.cv-modal {
+  background: #0e1525;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  width: min(860px, 100%);
+  height: min(90vh, 900px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+}
+
+.cv-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  background: #111827;
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.cv-modal-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
+
+.cv-modal-sub {
+  font-size: 0.73rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 3px;
+}
+
+.cv-modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.cv-download-btn:hover {
+  opacity: 0.85;
+}
+
+.cv-close-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cv-close-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.cv-viewer {
+  flex: 1;
+  overflow: hidden;
+  background: #1a1f2e;
+}
+
+.cv-viewer iframe {
+  border: none;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .cv-modal {
+    height: 95vh;
+    border-radius: 12px;
+  }
+
+  .cv-modal-title {
+    font-size: 0.85rem;
+  }
+
+  .cv-modal-sub {
+    display: none;
+  }
+}
