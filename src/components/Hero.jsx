@@ -58,20 +58,48 @@ const Hero = () => {
 
           <motion.div
             className="hero-visual"
-            initial={{ opacity: 0, scale: 0.85 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
           >
-            <div className="profile-ring outer">
-              <div className="profile-ring mid">
-                <div className="profile-circle">
-                  <span>👨‍💻</span>
+            <div className="dev-card">
+              <div className="dev-card-top">
+                <div className="dev-avatar">GV</div>
+                <div className="dev-card-info">
+                  <div className="dev-name">Gavin Taraka</div>
+                  <div className="dev-title">Full Stack · Automation · Security</div>
+                </div>
+                <span className="dev-status-dot" />
+              </div>
+
+              <div className="dev-stats">
+                <div className="dev-stat">
+                  <div className="dev-stat-val">6+</div>
+                  <div className="dev-stat-lbl">Projects</div>
+                </div>
+                <div className="dev-stat-divider" />
+                <div className="dev-stat">
+                  <div className="dev-stat-val">2+</div>
+                  <div className="dev-stat-lbl">Yrs Exp</div>
+                </div>
+                <div className="dev-stat-divider" />
+                <div className="dev-stat">
+                  <div className="dev-stat-val">52</div>
+                  <div className="dev-stat-lbl">OSINT Tools</div>
                 </div>
               </div>
+
+              <div className="dev-stack">
+                {['React', 'Laravel', 'Python', 'Angular', 'Docker', 'n8n'].map(t => (
+                  <span key={t} className="dev-tag">{t}</span>
+                ))}
+              </div>
+
+              <div className="dev-card-footer">
+                <span className="dev-location">📍 Malang, Indonesia</span>
+                <span className="dev-open">Open to work</span>
+              </div>
             </div>
-            <div className="floating-badge badge-1">Angular</div>
-            <div className="floating-badge badge-2">Laravel</div>
-            <div className="floating-badge badge-3">Python</div>
           </motion.div>
         </div>
 
