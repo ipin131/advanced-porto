@@ -48,6 +48,8 @@ const CodeCard = () => {
           <div className="code-line pl-4"><span className="c-str">"React"</span><span className="c-op">,</span> <span className="c-str">"Laravel"</span><span className="c-op">,</span> <span className="c-str">"Python"</span><span className="c-op">,</span></div>
           <div className="code-line pl-4"><span className="c-str">"Angular"</span><span className="c-op">,</span> <span className="c-str">"Docker"</span><span className="c-op">,</span> <span className="c-str">"n8n"</span><span className="c-op">,</span></div>
           <div className="code-line pl-2">]<span className="c-op">,</span></div>
+          <div className="code-line pl-2"><span className="c-prop">aiTools</span><span className="c-op">:</span> [<span className="c-str">"Claude Code"</span><span className="c-op">,</span> <span className="c-str">"Ollama"</span><span className="c-op">,</span> <span className="c-str">"Kiro"</span>]<span className="c-op">,</span></div>
+          <div className="code-line pl-2"><span className="c-prop">design</span><span className="c-op">:</span> <span className="c-str">"Figma"</span><span className="c-op">,</span></div>
           <div className="code-line pl-2"><span className="c-prop">openToWork</span><span className="c-op">:</span> <span className="c-bool">true</span><span className="c-op">,</span></div>
           <div className="code-line">{'}'}</div>
           <div className="code-line mt-1"><span className="c-comment">// 📍 Available for freelance & remote</span></div>

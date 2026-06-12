@@ -52,6 +52,16 @@ const SKILLS = [
     color: '#e3b341',
     items: ['Leaflet', 'GeoJSON', 'Unity', 'C# (Game)', '3D Modeling', 'Augmented Reality'],
   },
+  {
+    category: 'AI Dev Tools',
+    color: '#a78bfa',
+    items: ['Claude Code', 'ChatGPT', 'GitHub Copilot', 'Codex', 'Kiro', 'Ollama', 'Cursor'],
+  },
+  {
+    category: 'Design & Collaboration',
+    color: '#f472b6',
+    items: ['Figma', 'Git / GitHub', 'Notion', 'Postman', 'VS Code'],
+  },
 ]
 
 const About = () => {
