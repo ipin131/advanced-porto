@@ -8,7 +8,7 @@ const projects = [
     description:
       'Full-stack HRMS for AirNav Indonesia built with Laravel 12, React, ViteJS, and Docker — featuring n8n workflow automation for HR pipelines, LLM-powered natural language reporting, and Cloudflare-secured production deployment. Developed in a 3-person agile team over 6+ months.',
     tags: ['Laravel', 'React', 'Docker', 'n8n', 'MySQL'],
-    link: '#',
+    link: 'https://manajemen.sumberjaya.top',
     color: '#6366f1',
   },
   {
