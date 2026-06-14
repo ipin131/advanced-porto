@@ -4,3 +4,9 @@ dist/
 .env.local
 .DS_Store
 Thumbs.db
+
+# Local Netlify folder
+.netlify
+
+# n8n workflow files with credentials (import only, do not commit)
+n8n-portfolio-chat-direct.json
